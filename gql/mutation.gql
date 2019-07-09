@@ -1,0 +1,39 @@
+mutation deleteCourse($ID:Int!){
+    removeCourse(id:$ID){
+        id
+        url
+    }
+}
+//Query Variables
+{
+"ID":1
+}
+
+------------------------------------------------
+mutation editCourse($id:Int!,$title: String,$author: String,$description: String){
+updateCourse(id:$id,title:$title,author:$author,description:$description){
+    id
+    url
+}
+}
+//Query Variables
+{
+"id": 1,
+"title": "abc",
+"description": "edit Description",
+"topic":"NEW TOPIC"
+}
+------------------------------------------------
+Add data
+
+mutation addData{
+  addCourse(id: 8,
+            title: "new1233",
+            author: "String",
+            description: "String",
+            topic: "String",
+            url: "String"){
+    id
+    title
+  }
+}

@@ -1,0 +1,37 @@
+// get Data by ID
+query getbyIdcourse($Id: Int!){
+    course(id:$Id){
+        id
+        author
+        url
+    }
+}
+//Query Variables
+{
+  "Id":1
+}
+------------------------------------------------
+// To get all Data
+query allCourses{
+  allCourses{
+    id
+    author
+    url
+  }
+}
+------------------------------------------------
+// get Data by topic
+query getByTopic($topic:String){
+  courses(topic: $topic){
+    id
+    title
+    author
+    url
+  }
+}
+
+//Query Variables
+{
+  "topic": "Node.js"
+}
+------------------------------------------------s
